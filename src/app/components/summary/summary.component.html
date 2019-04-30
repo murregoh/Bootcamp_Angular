@@ -1,0 +1,15 @@
+<div class="container center">
+  <app-header></app-header>
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist" *ngFor="let item of summaryItems">
+        <a class="list-group-item list-group-item-action" id="{{ item.id }}" data-toggle="list" href="#{{item.href}}" role="tab" attr.aria-controls="{{item.control}}">{{ item.title }}</a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent" *ngFor="let item of summaryItems">
+        <div class="tab-pane fade" id="{{item.href}}" role="tabpanel" attr.aria-labelledby="{{ item.id }}">{{item.description}}</div>
+      </div>
+    </div>
+  </div>
+</div>

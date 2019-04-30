@@ -3,12 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+import { HomeComponent } from './components/home/home.component';
+import { SummaryComponent } from './components/summary/summary.component';
+import { DemoComponent } from './components/demo/demo.component';
+import { ChallengeComponent } from './components/challenge/challenge.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    HomeComponent,
+    SummaryComponent,
+    DemoComponent,
+    ChallengeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
