@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { SummaryService } from 'src/app/services/summary.service';
-import { ISummaryItems } from 'src/app/interfaces/summaryItems';
+import { ISummaryItem } from 'src/app/interfaces/summaryItem';
 
 
 @Component({
@@ -9,7 +9,8 @@ import { ISummaryItems } from 'src/app/interfaces/summaryItems';
 })
 export class SummaryComponent implements OnInit {
 
-  summaryItems: ISummaryItems[];
+  summaryItems: ISummaryItem[];
+  imageWidth: number = 400;
 
   constructor(private _summary: SummaryService, element: ElementRef) { }
 
