@@ -15,7 +15,7 @@ export class HomeService {
                 route: '/summary'
             },
             {
-                title: 'Demostración',
+                title: 'Demostración con GitHub',
                 description: 'Como resultado final tendremos la siguiente aplicación la cual se conecta a la API publica de GitHub donde consumiremos diferentes End Points de este servicio gratuito para desarrolladores.',
                 buttonText: 'Ver Demostración',
                 route: '/demo'

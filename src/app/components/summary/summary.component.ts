@@ -11,11 +11,17 @@ export class SummaryComponent implements OnInit {
 
   summaryItems: ISummaryItem[];
   imageWidth: number = 400;
+  errorMessage: string;
 
   constructor(private _summary: SummaryService, element: ElementRef) { }
 
   ngOnInit() {
-    this.summaryItems = this._summary.getSummaryItems();
+    this._summary.getSummaryItems().subscribe(
+      data => {
+        this.summaryItems = data;
+      },
+      error => this.errorMessage = <any>error
+    );
   }
 
 
