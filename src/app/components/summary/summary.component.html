@@ -5,6 +5,11 @@
         <div class="list-group" id="list-tab" role="tablist">
           <a class="list-group-item list-group-item-action" *ngFor="let item of summaryItems" id="list-{{ item.idItem }}-list" data-toggle="list" href="#list-{{ item.idItem }}" role="tab" attr.aria-controls="{{ item.idItem }}">{{ item.title }}</a>
         </div>
+        <br>
+        <div class="col-4 btn btn-primary" [routerLink]="['/home']">
+          <i class="fas fa-hand-point-left"></i>
+          Atras
+        </div>
       </div>
       <div class="col-8">
         <div class="tab-content" id="nav-tabContent">
@@ -20,5 +25,6 @@
           </div>
         </div>
       </div>
+
     </div>
 </div>

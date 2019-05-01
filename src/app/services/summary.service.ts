@@ -38,38 +38,38 @@ export class SummaryService {
             },
             {
                 title: 'Mas de componentes (typescript)',
-                description: '...',
+                description: 'En esta seccion hablaremos temas como Interfaces y strong typing',
                 image: '',
                 idItem: 'mascomponente',
-                ref: ''
+                ref: 'Written by Mateo Urrego Hoyos'
             },
             {
-                title: 'Pipes',
-                description: '...',
-                image: '',
+                title: 'Pipes & Custom Pipes',
+                description: 'Cada aplicación comienza con lo que parece una tarea simple: obtener datos, transformarlos y mostrarlos a los usuarios. Obtener datos puede ser tan simple como crear una variable local o tan complejo como transmitir datos a través de un WebSocket.',
+                image: 'https://appdividend.com/wp-content/uploads/2018/12/Angular-Pipe-Example-Tutorial.png',
                 idItem: 'pipes',
-                ref: ''
+                ref: 'https://angular.io/guide/pipes'
             },
             {
                 title: 'Componentes Anidados',
-                description: '...',
+                description: 'Tal como su palabra lo indica, los componentes anidados son aquellos que se encuentran dentro de otros componentes, asimismo, estos componente pueden compartir informacion entre si por medio de los @Input @Output',
                 image: '',
                 idItem: 'componentesanidados',
-                ref: ''
+                ref: 'Written by Mateo Urrego Hoyos'
             },
             {
                 title: 'Servicios',
-                description: '...',
-                image: '',
+                description: 'El servicio es una categoría amplia que abarca cualquier valor, función o característica que necesita una aplicación. Un servicio es típicamente una clase con un propósito estrecho y bien definido. Debe hacer algo específico y hacerlo bien.',
+                image: 'https://cdn-images-1.medium.com/max/1600/1*NrNWDYjMUb8n5T701_ibKw.png',
                 idItem: 'servicios',
-                ref: ''
+                ref: 'https://angular.io/guide/architecture-services#service-examples'
             },
             {
                 title: 'Routing',
-                description: '...',
-                image: '',
+                description: 'El enrutador angular ("el enrutador") toma prestado de este modelo. Puede interpretar una URL del navegador como una instrucción para navegar a una vista generada por el cliente. Puede pasar parámetros opcionales junto con el componente de vista de soporte que lo ayuda a decidir qué contenido específico presentar. Puede vincular el enrutador a los enlaces en una página y navegará a la vista de aplicación adecuada cuando el usuario haga clic en un enlace. Puede navegar de forma imperativa cuando el usuario hace clic en un botón, selecciona de un cuadro desplegable o en respuesta a algún otro estímulo de cualquier fuente. Y el enrutador registra la actividad en el diario de historial del navegador para que los botones de avance y retroceso también funcionen.',
+                image: 'https://s3-eu-west-1.amazonaws.com/altario-wordpressmedia/wp-content/uploads/2017/05/03145249/angulartics.png',
                 idItem: 'routing',
-                ref: ''
+                ref: 'https://angular.io/guide/router'
             }
         ]
     }
