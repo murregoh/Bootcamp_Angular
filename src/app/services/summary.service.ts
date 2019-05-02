@@ -17,11 +17,11 @@ export class SummaryService {
     getSummaryItems(): Observable<ISummaryItem[]> {
         return this.http.get<ISummaryItem[]>(this.apiUrl).pipe(
             tap(data => console.log(data)),
-            catchError(this.handleError)
+            catchError(this.handlerError)
         )
     }
 
-    handleError(err: HttpErrorResponse) {
+    handlerError(err: HttpErrorResponse) {
         console.log(err.message);    
         return throwError(err.message);
     }

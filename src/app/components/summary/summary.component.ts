@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SummaryService } from 'src/app/services/summary.service';
 import { ISummaryItem } from 'src/app/interfaces/summaryItem';
 
@@ -13,7 +13,7 @@ export class SummaryComponent implements OnInit {
   imageWidth: number = 400;
   errorMessage: string;
 
-  constructor(private _summary: SummaryService, element: ElementRef) { }
+  constructor(private _summary: SummaryService) { }
 
   ngOnInit() {
     this._summary.getSummaryItems().subscribe(

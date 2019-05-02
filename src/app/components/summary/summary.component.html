@@ -10,7 +10,7 @@
       </div>
       <div class="col-8">
         <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show" *ngFor="let item of summaryItems" id="list-{{ item.idItem }}" role="tabpanel" attr.aria-labelledby="list-{{ item.idItem }}-list">{{ item.description }}
+          <div class="tab-pane fade show text-justify" *ngFor="let item of summaryItems" id="list-{{ item.idItem }}" role="tabpanel" attr.aria-labelledby="list-{{ item.idItem }}-list">{{ item.description }}
               <div class="m-3">
                 <img [src]='item.image' [style.width.px]='imageWidth' class="rounded mx-auto d-block">
               </div>
