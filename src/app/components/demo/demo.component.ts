@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { GitHubService } from 'src/app/services/github.service';
 import { IGitHubUser } from 'src/app/interfaces/gitHubUser';
 import { IGitHubUser2 } from 'src/app/interfaces/gitHubUser2';
@@ -18,18 +18,19 @@ export class DemoComponent implements OnInit {
   loadingFollower: boolean = false;
   loadingFollowing: boolean = false;
 
+
+
   constructor(private _gitHub: GitHubService) { }
 
   ngOnInit() { }
 
-  searchUserName(username: string): void {
+  searchUserName(username: string) {
     if (username == undefined) {
       window.alert(`Debes ingresar un usuario.`)
     } else {
-
       this.loading = true;
       console.log(username);
-      this._gitHub.getUserProperties(username).subscribe(
+      return this._gitHub.getUserProperties(username).subscribe(
         user => {
           this.user = user;
           this.loading = false;
@@ -47,13 +48,9 @@ export class DemoComponent implements OnInit {
               this.loadingFollower = false;
             }
           );
-
         },
         error => this.loading = false
       )
-
-
-
     }
   }
 

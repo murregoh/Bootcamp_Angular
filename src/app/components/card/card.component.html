@@ -1,4 +1,4 @@
 <img [src]="user.avatar_url" [title]="user.login" 
     class="rounded-circle card-img" 
     [style.width.px]='imageWidth' 
-    [style.margin.px]='imageMargin'>
+    [style.margin.px]='imageMargin' (click)="searchNewUser(user.login)">

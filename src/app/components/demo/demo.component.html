@@ -5,7 +5,7 @@
     <input [(ngModel)]="userName" type="text" class="form-control" placeholder="username"
       aria-describedby="button-addon2">
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="searchUserName(userName)"><i
+      <button class="btn btn-outline-secondary" type="submit" id="button-addon2" (click)="searchUserName(userName)"><i
           class="fab fa-github"></i> Buscar en GitHub</button>
     </div>
   </div>
@@ -22,24 +22,25 @@
         <p class="font-weight-lighter text-center">{{user.location}}</p>
         <hr>
         <p class="text-center">{{user.bio}}</p>
+        <app-back-button></app-back-button>
       </div>
 
       <div class="col-md-4">
         <p class="text-center">Following {{ following?.length }}</p>
         <app-loading *ngIf="loadingFollowing"></app-loading>
-        <app-card [user]='foll' *ngFor="let foll of following"></app-card>
+        <app-card [user]='foll' *ngFor="let foll of following" (nextUser)="searchUserName($event)"></app-card>
       </div>
 
       <div class="col-md-4">
         <p class="text-center">Followers {{ follower?.length }}</p>
         <app-loading *ngIf="loadingFollower"></app-loading>
-        <app-card [user]='follo' *ngFor="let follo of follower"></app-card>
+        <app-card [user]='follo' *ngFor="let follo of follower" (nextUser)="searchUserName($event)"></app-card>
       </div>
 
     </div>
 
-
   </div>
+
 
 
 </div>
